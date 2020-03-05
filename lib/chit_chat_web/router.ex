@@ -17,6 +17,8 @@ defmodule ChitChatWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/rooms", RoomController
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
